@@ -1,0 +1,84 @@
+const {
+  NODE_ENV,
+  APP_PORT: APP_PORT_ENV,
+  DB_HOST_READ = '',
+  DB_HOST_WRITE = '',
+  DB_READ: DB_USER_READ = '',
+  DB_READ_PASS: DB_PASS_READ = '',
+  DB_WRITE: DB_USER_WRITE = '',
+  DB_WRITE_PASS: DB_PASS_WRITE = '',
+  DB_NAME = '',
+  DB_PORT = 3306,
+  AWS_ACCESS_KEY_ID = '',
+  AWS_SECRET_ACCESS_KEY = '',
+  AWS_REGION = '',
+  SES_SOURCE_EMAIL = '',
+  SECRET = '',
+  AWS_S3_BUCKET_NAME = '',
+  STATIC_CONTENT_BASE_URL: STATIC_CBU = '',
+  SENDGRID_API_KEY = "",
+  MAIL_FROM = "",
+  STRIPE_KEY = "",
+  APP_URL = "",
+  TWILIO_ACCOUNT_SID = "",
+  TWILIO_AUTH_TOKEN = "",
+  TWILIO_PHONE_NUMBER = "",
+  APP_ENV = "",
+  ENCRYPT_KEYPHRASE = '',
+  V2_TOKEN = '',
+} = process.env;
+
+export const ENVIRONMENT = NODE_ENV;
+
+export const APP_PORT = Number(APP_PORT_ENV);
+export const API_BASE_PATH_V1 = '/api/v1';
+export const API_BASE_PATH_V2 = '/api/v2';
+
+export const DB_CONFIGURATION = {
+  DB_NAME,
+  DB_PORT,
+  DB_HOST_READ,
+  DB_HOST_WRITE,
+  DB_USER_READ,
+  DB_USER_WRITE,
+  DB_PASS_READ,
+  DB_PASS_WRITE,
+  APP_ENV
+};
+
+export const AWS_CONFIG = {
+  AWS_ACCESS_KEY_ID,
+  AWS_SECRET_ACCESS_KEY,
+  AWS_REGION
+};
+export const APP_MAIN_URL = APP_URL;
+
+export const AWS_S3_BUCKET = AWS_S3_BUCKET_NAME;
+
+export const STATIC_CONTENT_BASE_URL = STATIC_CBU;
+
+export const EMAIL_SENDER = SES_SOURCE_EMAIL;
+
+export const LOGIN_VERIFICATION_CODE_AGE_IN_MILLISECONDS = 15 * 60 * 1000;
+
+export const JWT_SECRET = SECRET;
+export const JWT_LIFETIME = '10h';
+
+export const CRYPTO_SECRET = SECRET;
+
+export const EMAIL_CONFIGURATION = {
+  apiKey: SENDGRID_API_KEY,
+  from:MAIL_FROM,
+};
+
+export const TWILIO_CONFIGURATION = {
+  accountSid: TWILIO_ACCOUNT_SID,
+  authToken: TWILIO_AUTH_TOKEN,
+  phoneNumber: TWILIO_PHONE_NUMBER,
+}
+
+export const STRIPE_PRIVATE_KEY = STRIPE_KEY
+
+export const PRIVATE_KEY_ENCRYPT_KEYPHRASE = ENCRYPT_KEYPHRASE
+
+export const V2_CUSTOM_TOKEN = V2_TOKEN

@@ -1,0 +1,12 @@
+.env.local
+.env
+app.yaml
+node_modules/
+public/node_modules
+coverage
+yarn-error.log
+.idea/*
+.idea/workspace.xml
+/nocommit
+/src/config/config.js
+dist

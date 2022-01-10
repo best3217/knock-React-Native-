@@ -1,0 +1,5 @@
+env.local
+node_modules/
+public/node_modules
+coverage
+yarn-error.log
